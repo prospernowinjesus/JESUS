@@ -1,0 +1,15 @@
+1.a. Profile names like "Profile 1", "Profile 2"
+
+b. Yes
+
+2.a. No.. Just know that the initial prompt commands AI to return only one code block
+
+b. copy the entire last response and parse out the triple backticks (```)
+
+3.a. I don't really know whether its a standard Cloudflare/reCAPTCHA checkbox. We are looking to integrate a free, browser-level solver extension .. we have already installed such an extension.
+
+b. waiting for the "Stop Generating" button to turn back into a "Send" button
+
+4.a. e.g., "# filepath: montana-system/client-side/src/main.py"
+
+b. Give us the best way to and give us it as a note so that we should hard wire it into our initial prompt

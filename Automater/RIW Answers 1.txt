@@ -1,0 +1,11 @@
+1. I am comfortable with both ways
+
+2. open-source browser extension.. we have already installed the extension
+
+3. typing a command in the terminal
+
+4. just the raw path like `src/components/button.tsx`
+
+5. We don't know as of now the commands that should be written in the setup guide for the automation because we only used to have the setup guide written for us use easy-to-follow step-by-step instructions. I am are comfortable with the automation executing these terminal commands directly on your system
+
+6. a simple `config.txt` file in our main directory where we can easily swap the model name out before starting a new project

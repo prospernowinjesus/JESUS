@@ -1,0 +1,11 @@
+1. Browser Launching vs. Attaching: AI platforms (Claude, arena.ai) have aggressive Cloudflare/anti-bot measures that often block automated browser instances. Are you open to a setup where you launch Chrome via a shortcut that opens it with a "remote debugging port," allowing the Python automation to simply attach to your active, human-verified session, or do you strictly need the script to launch the browser from a closed state?
+
+2. CAPTCHA Handling: You mentioned a CAPTCHA checkbox on arena.ai. Fully automated, 100% free CAPTCHA solving is notoriously unreliable against modern protections. Would you prefer the script to pause and play an alert sound so you can manually click the checkbox, or do you want to attempt using an open-source browser extension/mouse-simulation to click it automatically (with the understanding it may sometimes fail)?
+
+3. Triggering the Phases: Since the workflow pauses for you to answer the RIW questions, how do you want to trigger Phase 1 (Initial Prompt) and Phase 2 (Resume & arena.ai)? Do you prefer double-clicking a `.bat` file on your desktop, typing a command in the terminal, or using a global keyboard shortcut (e.g., Ctrl+Alt+A)?
+
+4. File Path Formatting: For the automation to reliably extract and create the files from arena.ai, it needs a predictable pattern. What is the exact syntax the AI uses to write the file path at the top of the code block? (e.g., `// File: src/main.js`, `### /app/index.html`, or just the raw path like `src/components/button.tsx`).
+
+5. Automated Setup Guide Execution: You suggested the automation could follow the final setup guide. What type of commands usually make up this setup? (e.g., `npm install`, `pip install -r requirements.txt`, Python script execution). Are you comfortable with the automation executing these terminal commands directly on your system, or should it generate a `setup.bat` file for you to review and run manually?
+
+6. Model Selection Configuration: You mentioned selecting the "model that we should have configured" on arena.ai. Do you want this model choice hardcoded into the automation script, or do you want a simple `config.txt` file in your main directory where you can easily swap the model name out before starting a new project?

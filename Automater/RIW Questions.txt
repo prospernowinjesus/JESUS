@@ -1,0 +1,19 @@
+================================================================================
+REQUIREMENTS INTERROGATION WORKFLOW (RIW): FULL-CYCLE DEV AUTOMATION
+================================================================================
+
+1. CHROME PROFILE & SESSION PERSISTENCE
+   a. How do you currently distinguish your Chrome profiles? (e.g., Profile names like "Profile 1", "Profile 2", or by the Google Account email associated with them?)
+   b. Since the automation needs to "remember" the specific chat thread and profile used in Step 1 to resume in Step 2, are you comfortable launching Chrome via a remote debugging port (e.g., --remote-debugging-port=9222) so the automation script can seamlessly attach to your active, logged-in browser session?
+
+2. CLAUDE INTERACTION & DOM READING
+   a. When Claude returns the RIW questions or the final prompt, is there a predictable text anchor inside or right before the code block we can look for (e.g., "### RIW Questions" or "ANATHOTH COUNT") to guarantee we grab the correct block?
+   b. Since Claude's web interface occasionally shifts its underlying HTML structure, would you prefer the script to target standard Markdown code block elements ('pre' or 'code' tags), or copy the entire last response and parse out the triple backticks (```)?
+
+3. ARENA.AI & CAPTCHA HANDLING
+   a. You mentioned the automation must satisfy the captcha checkbox on arena.ai. Is this a standard Cloudflare/reCAPTCHA checkbox? Note that completely automated checkbox clicks often trigger harder visual challenges. Would you like the automation to pause and flash a console alert for you to manually click it, or are you looking to integrate a free, browser-level solver extension?
+   b. How should the script identify that arena.ai has completely finished generating a response before it types "CONTINUE"? (e.g., waiting for the "Stop Generating" button to turn back into a "Send" button?)
+
+4. FILE STRUCTURE & SETUP EXECUTION
+   a. For the file paths written at the very top of the code blocks on arena.ai, what format do they typically follow? (e.g., "# filepath: src/main.py" or "// path: index.html"?). This ensures the regex parser creates the directories accurately.
+   b. For the automated setup guide execution: What types of commands does this guide usually entail? (e.g., running `npm install`, `pip install`, launching a docker container, or executing a batch script?). Knowing this helps determine if the automation should spin up a background PowerShell/CMD instance to run them safely.
